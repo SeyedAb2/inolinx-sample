@@ -1,0 +1,104 @@
+<!-- Start Header -->
+<header class="sticky-top">
+    <mat-toolbar class="w-100">
+        <mat-toolbar-row class="mx-0 px-0 w-100">
+            <div class="px-0 px-sm-3 py-0 text-dark header-main">
+                <div class="container-fluid">
+                    <div class="row d-flex align-items-center justify-content-start">
+                        <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+                            <mat-icon *ngIf = "!sidenav.opened">
+                                menu
+                            </mat-icon>
+                            <mat-icon *ngIf = "sidenav.opened">
+                                close
+                            </mat-icon>
+                        </button>
+                        <a routerLink="" class="col-auto d-flex align-items-center pt-1 pt-md-0 my-lg-0 ms-lg-0 text-dark text-decoration-none">
+                            <img src="../assets/image/1.png" class="logo" alt="">
+                            <span class="logo-text d-none d-md-block">اینولینکس</span>
+                        </a>
+                        <ul class="nav col-9 col-lg-auto me-0 justify-content-start my-md-0 d-none d-md-flex">
+                            <li>
+                                <a routerLink="home" routerLinkActive="routerActive" mat-button class="nav-link py-3 py-md-0 pt-sm-3 pt-md-3">
+                                    <i class="bi fas fa-home d-block mx-auto "></i> <span class="d-none d-md-block">خانه</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a routerLink="magezine" routerLinkActive="routerActive" mat-button class="nav-link py-3 py-md-0 pt-sm-3 pt-md-3">
+                                    <i class="bi fas fa-book d-block mx-auto "></i> <span class="d-none d-md-block">مجلات</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a routerLink="contact-us" routerLinkActive="routerActive" mat-button class="nav-link py-3 py-md-0 pt-sm-3 pt-md-3">
+                                    <i class="bi fas fa-mail-bulk d-block mx-auto "></i> <span class="d-none d-md-block">تماس با ما</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</header>
+<!-- End Header -->
+<!-- Start Main Container Route + Footer  -->
+<mat-sidenav-container>
+    <!-- Start SideNavBar Mneu  -->
+    <mat-sidenav #sidenav="matSidenav">
+        <a md-button (click)="sidenav.close()" routerLink="home" routerLinkActive="routerActive" class="nav-link menu-button">
+            <i class="fas fa-home fa-lg ms-2"></i>
+            <span>خانه</span>
+        </a>
+        <a md-button (click)="sidenav.close()" routerLink="magezine" routerLinkActive="routerActive" class="nav-link menu-button">
+            <i class="fas fa-book fa-lg ms-2"></i>
+            <span>مجله</span>
+        </a>
+        <a md-button (click)="sidenav.close()" routerLink="contact-us" routerLinkActive="routerActive" class="nav-link menu-button">
+            <i class="fas fa-mail-bulk fa-lg ms-2"></i>
+            <span>تماس باما</span>
+        </a>
+    </mat-sidenav>
+    <!-- End SideNavBar Mneu  -->
+    <mat-sidenav-content>
+        <!-- Start Pages Content Routing Modules  -->
+        <div class="content">
+            <main class="margin-top" [@routeAnimations]="prepareRoute(outlet)">
+                <router-outlet (activate)="onActivate($event)" #outlet="outlet"></router-outlet>
+            </main>
+        </div>
+        <!-- End Pages Content Routing Modules  -->
+        <!-- Start Footer  -->
+        <footer class="container-fluid bg-white ">
+            <div class="row d-flex align-items-center justify-content-start px-md-4 ">
+                <div class="col-1 d-flex align-items-center p-2 ab ">
+                    <img src="../assets/image/1.png " class="logo-footer " alt=" ">
+                    <span class="logo-text-footer text-secondary ">اینولینکس</span>
+                </div>
+                <ul class="nav col-9 col-lg-auto me-5 me-md-1 justify-content-start my-md-0 ">
+                    <li>
+                        <a class="nav-link text-secondary ">
+                            <span>© ۲۰۲۱</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="home " mat-button class="nav-link text-secondary ">
+                            <span>خانه</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="magezine " mat-button class="nav-link text-secondary ">
+                            <span>مجلات</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="contact-us " mat-button class="nav-link text-secondary ">
+                            <span>درباره ما</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <!-- End Footer  -->
+    </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- End Main Container Route + Footer  -->

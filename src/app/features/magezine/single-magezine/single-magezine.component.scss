@@ -1,0 +1,54 @@
+@import '../magezine.component.scss';
+// * {
+//     .scroll-magzine-page {
+//         margin: 0;
+//         padding: 0;
+//     }
+//     .scroll-magzine-page::-webkit-scrollbar {
+//         background: #a5a5a5;
+//         display: none;
+//         width: 0px;
+//         scrollbar-color: rebeccapurple green;
+//     }
+//     .scroll-magzine-page::-webkit-scrollbar-track {
+//         background: none;
+//     }
+//     .scroll-magzine-page::-webkit-scrollbar-thumb {
+//         background-color: none;
+//         border-right: none;
+//         border-left: none;
+//     }
+//     .scroll-magzine-page::-webkit-scrollbar-track-piece:end {
+//         background: none;
+//         margin-bottom: 0px;
+//     }
+//     .scroll-magzine-page::-webkit-scrollbar-track-piece:start {
+//         background: none;
+//         margin-top: 0px;
+//     }
+//     .scroll-magzine-page {
+//         -ms-overflow-style: none;
+//         scrollbar-width: none;
+//         /* Firefox */
+//     }
+// }
+/// Tab /////////////////////////////////
+.tab {
+    @include borderTopCustom(0, 1);
+    margin-top: 10px !important;
+    position: relative;
+    .col-1 {
+        font-family: vazir !important;
+        font-size: 1rem !important;
+        font-weight: bold !important;
+        text-decoration: none;
+        color: rgb(77, 77, 77) !important;
+        border-radius: 0;
+        &:hover {
+            color: black !important;
+        }
+    }
+    .active_tab {
+        border-bottom: 2px solid #005f10 !important;
+    }
+}

@@ -1,0 +1,126 @@
+@import 'assets/scss/fonts.scss';
+@import 'assets/scss/base.scss';
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+html {
+    scrollbar-color: #a5a5a5 #636363 !important;
+    scrollbar-width: thin;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* start scroll custom */
+
+::-webkit-scrollbar {
+    background: #a5a5a5;
+    display: block;
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #636363;
+    border-right: none;
+    border-left: none;
+}
+
+::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 10px;
+}
+
+::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 10px;
+}
+
+
+/* end scroll custom */
+
+body {
+    font-family: Vazir !important;
+    background-color: $backgroundColor !important;
+}
+
+.responsive-high-resolation {
+    @media (min-width: 1400px) {
+        max-width: 1200px !important;
+        margin: auto !important;
+        .pin {
+            height: 400px !important;
+        }
+        .pin-bottom {
+            height: 250px !important;
+        }
+    }
+}
+
+.direction {
+    direction: rtl !important;
+}
+
+.direction-left {
+    direction: ltr !important;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.font-weight-bold {
+    font-weight: 900 !important;
+}
+
+.font-weight-normal {
+    font-weight: 600 !important;
+}
+
+.font-weight-thick {
+    font-weight: 300 !important;
+}
+
+.font-family {
+    font-family: vazir !important;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.btn-custom {
+    font-family: vazir !important;
+    font-size: 15.5px;
+    color: rgb(116, 116, 116);
+}
+
+app-root {
+    position: relative;
+    height: auto;
+}
+
+.border-col-setting {
+    @include borderCustom(7, 1.7);
+}
+
+
+/* start const right aside options */
+
+.img-responsive {
+    height: 230px !important;
+    width: 100% !important;
+}
+
+
+/* end const right aside options */

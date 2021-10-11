@@ -1,0 +1,153 @@
+@import '../assets/scss/base.scss';
+
+/*** Start Header StyleSheet ***/
+
+header {
+    mat-toolbar-row {
+        display: inline !important;
+        .header-main {
+            background: rgb(255, 255, 255) !important;
+            @include borderBottomCustom(0, 1);
+            @media (max-width: 768px) {
+                height: 100%;
+            }
+        }
+    }
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+    .nav {
+        font-weight: bold;
+        .bi {
+            font-size: 1.3rem;
+            color: $darkColor;
+            font-weight: bold;
+        }
+        span {
+            font-size: 0.9rem;
+            color: $darkColor;
+        }
+    }
+    .logo-text {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $darkColor;
+        font-family: vazir !important;
+    }
+    ul {
+        li {
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+    }
+}
+
+
+/*** End Header StyleSheet ***/
+
+
+/*** Start SideBarNav StyleSheet ***/
+
+mat-sidenav-container {
+    height: auto;
+    background: $backgroundColor !important;
+    @media(max-width: 768px) {
+        height: calc(100vh - 56px);
+    }
+    mat-sidenav {
+        display: none;
+        width: 100%;
+        background: rgb(255, 255, 255);
+        color: rgb(131, 131, 131);
+        text-align: center;
+        @media(max-width: 768px) {
+            width: 250px;
+            display: inline
+        }
+    }
+    .content {
+        height: auto;
+        background-color: $backgroundColor !important;
+    }
+    .menu-button {
+        width: 10%;
+        display: inline;
+        direction: rtl;
+        float: right;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 1rem;
+        color: rgb(88, 88, 88);
+        mat-icon {
+            margin-left: 8px;
+        }
+        @media(max-width: 768px) {
+            display: flex;
+            width: 100%;
+        }
+    }
+}
+
+
+/*** End SideBarNav StyleSheet ***/
+
+
+/*** Start Main Pages Route StyleSheet ***/
+
+.margin-top {
+    position: relative;
+    max-height: 100% !important;
+    min-height: 1000px;
+    margin-top: 40px;
+    @media(max-width: 992px) {
+        margin-top: 20px;
+    }
+    @media(max-width: 768px) {
+        margin-top: 0.1px;
+    }
+}
+
+
+/*** End Main Pages Route StyleSheet ***/
+
+.routerActive {
+    color: $BlueColor !important;
+    i,
+    .bi,
+    span {
+        color: $BlueColor !important;
+    }
+}
+
+
+/*** Start Footer StyleSheet ***/
+
+footer {
+    background: white !important;
+    button,
+    a {
+        font-size: 0.7rem;
+    }
+    ul {
+        @media (max-width: 370px) {
+            li {
+                width: 50px;
+                a {
+                    width: 70px;
+                }
+            }
+        }
+    }
+    .logo-footer {
+        width: 25px;
+        height: 25px;
+    }
+    .logo-text-footer {
+        font-size: .7rem;
+        font-weight: bold;
+    }
+}
+
+
+/*** End Footer StyleSheet ***/
